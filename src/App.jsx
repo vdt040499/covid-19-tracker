@@ -1,12 +1,15 @@
 import { FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import InfoBox from './components/InfoBox';
 
 function App() {
   //STATE = how to write a variable in REACT
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
+  
   //USEEFFECT = runs a piece of code based on a given condition
+  
   //https://disease.sh/v3/covid-19/countries
   useEffect(() => {
     const getCountriesData = async () => {
@@ -47,12 +50,14 @@ function App() {
         </FormControl>
       </div>
     
-      {/* Header */}
-      {/* Title * Select input dropdown field */}
+      <div className="app__stats">
+        <InfoBox title="Coronavirus Cases" cases={123} total={2000}/>
+        <InfoBox title="Recovered" cases={123} total={300}/>
+        <InfoBox title="Deaths" cases={400} total={4000}/>
+        
+        {/* InfoBoxs */}
 
-      {/* InfoBoxs */}
-      {/* InfoBoxs */}
-      {/* InfoBoxs */}
+      </div>
 
       {/* Table */}
       {/* Graph */}
