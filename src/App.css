@@ -28,6 +28,10 @@ body {
   justify-content: space-between;
 }
 
+.app__titleChart {
+  padding: 30px 0;
+}
+
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
